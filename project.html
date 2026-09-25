@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed project portfolio of Sarah Jeffrey - Case studies in data analytics, web engineering, and process automation.">
+  <title>Sarah Jeffrey | Featured Projects & Case Studies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Two-Way Navigation Across All Pages) -->
+  <header class="navbar" id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-brand" id="brand-logo" aria-label="Sarah Jeffrey Home">
+        <span class="nav-brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        <span>Sarah Jeffrey</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+          <li><a href="project.html" class="nav-link active" id="nav-projects">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      <!-- Breadcrumb Bar (Two-way navigation helper) -->
+      <div class="breadcrumbs-bar">
+        <a href="index.html" class="back-link" id="breadcrumb-home">&larr; Return to Home</a>
+        <a href="resume.html" class="back-link" id="breadcrumb-resume">Review Resume &rarr;</a>
+      </div>
+
+      <!-- Page Header -->
+      <section class="page-header" id="projects-header">
+        <h1 class="page-title">Project Studies & <span class="gradient-text">Portfolio</span></h1>
+        <p class="page-subtitle">
+          In-depth breakdowns of applied technical projects spanning exploratory data science, modern accessible web interfaces, and operational workflow automation.
+        </p>
+      </section>
+
+      <!-- Projects Grid -->
+      <section id="project-case-studies" aria-label="Project Case Studies">
+        <div class="grid">
+          
+          <!-- Project 1 -->
+          <article class="card" id="project-personal-site">
+            <span class="card-category-badge">Web Architecture & UX</span>
+            <h2 class="card-title">Responsive Personal Web Application</h2>
+            <p class="card-description">
+              Engineered a multi-page, high-performance web presence tailored for academic and career presentation. Built with zero runtime framework overhead to deliver instantaneous load times and 100% adherence to WCAG contrast guidelines.
+            </p>
+            <div class="card-details-block">
+              <strong>Implementation & Approach:</strong> Designed a unified CSS custom property design system featuring dark slate and deep navy hues, fluid typography scaling, and flexbox/grid layouts that adapt dynamically to any viewport without horizontal overflow.
+            </div>
+            <div class="card-details-block" style="border-left-color: var(--accent-emerald);">
+              <strong>Measurable Impact:</strong> 100% valid semantic HTML5, zero external build dependencies, sub-50ms render latency, and complete two-way cross-page navigation.
+            </div>
+            <div class="tag-list">
+              <span class="tag">HTML5 Semantic</span>
+              <span class="tag">CSS3 Variables</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card" id="project-data-analytics">
+            <span class="card-category-badge">Data Science & Modeling</span>
+            <h2 class="card-title">Higher Education & Graduate Outcomes Analysis</h2>
+            <p class="card-description">
+              Conducted an extensive exploratory statistical study analyzing the U.S. Department of Education College Scorecard and longitudinal recent graduate datasets to model the relationship between academic disciplines, student debt burdens, and five-year median earnings.
+            </p>
+            <div class="card-details-block">
+              <strong>Implementation & Approach:</strong> Ingested 500MB+ of raw tabular records using Python and Pandas. Implemented rigorous data hygiene routines, resolved missing value anomalies, computed skewness coefficients, and synthesized correlation matrices.
+            </div>
+            <div class="card-details-block" style="border-left-color: var(--accent-emerald);">
+              <strong>Measurable Impact:</strong> Produced reproducible Jupyter analysis notebooks with Seaborn distributions and an executive summary articulating ROI variances across analytical majors.
+            </div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">JupyterLab</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card" id="project-web-scraper">
+            <span class="card-category-badge">ETL & Web Crawling</span>
+            <h2 class="card-title">Automated Web Extraction & Text Pipeline</h2>
+            <p class="card-description">
+              Developed a configurable spider application using Python's Scrapy framework to crawl pagination hierarchies, extract unstructured quotation and author attribution metadata, and transform raw text into structured schema.
+            </p>
+            <div class="card-details-block">
+              <strong>Implementation & Approach:</strong> Formulated CSS selectors and XPath queries to isolate DOM target nodes. Configured item pipelines to sanitize HTML entities, format date stamps, and serialize normalized payloads into clean JSON and CSV streams.
+            </div>
+            <div class="card-details-block" style="border-left-color: var(--accent-emerald);">
+              <strong>Measurable Impact:</strong> Fully automated extraction across hundreds of pages in under 15 seconds with built-in error handling and rate-limiting throttling.
+            </div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Scrapy</span>
+              <span class="tag">XPath</span>
+              <span class="tag">JSON Pipelines</span>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card" id="project-sorority-tool">
+            <span class="card-category-badge">Process Automation</span>
+            <h2 class="card-title">Collegiate Points & Attendance Engine</h2>
+            <p class="card-description">
+              Built a custom algorithmic processing tool to automate point tracking and event attendance calculations for Alpha Delta Pi's 200+ collegiate members, replacing error-prone manual spreadsheets.
+            </p>
+            <div class="card-details-block">
+              <strong>Implementation & Approach:</strong> Designed Python validation scripts that match member IDs, verify event categories (philanthropy, chapter meetings, academic workshops), and apply weighted point calculation rules dynamically.
+            </div>
+            <div class="card-details-block" style="border-left-color: var(--accent-emerald);">
+              <strong>Measurable Impact:</strong> Saved the executive board an estimated 40+ administrative hours per semester while giving members immediate, dispute-free standing reports.
+            </div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Automation</span>
+              <span class="tag">CSV Data Engine</span>
+              <span class="tag">Operational Efficiency</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Two-Way Flow Navigation (Previous / Next Page Links) -->
+      <nav class="page-flow-nav" aria-label="Page Flow Navigation">
+        <div class="page-flow-col">
+          <span class="page-flow-label">&larr; Previous</span>
+          <a href="resume.html" class="page-flow-link" id="flow-prev-resume">Resume: Qualifications & Roles</a>
+        </div>
+        <div class="page-flow-col" style="text-align: right;">
+          <span class="page-flow-label">Next Up &rarr;</span>
+          <a href="index.html" class="page-flow-link" id="flow-next-home">Return to Home & Welcome &rarr;</a>
+        </div>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Footer (Two-way Navigation Back to All Pages) -->
+  <footer class="footer" id="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-brand-title">Sarah Jeffrey</span>
+        <span>Information Systems & Decision Sciences &bull; Baton Rouge, LA</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="project.html" class="footer-link">Projects</a>
+        <a href="mailto:sarah.aj.jeffrey@gmail.com" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

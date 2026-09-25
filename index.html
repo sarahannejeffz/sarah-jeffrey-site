@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website of Sarah Jeffrey - Information Systems & Decision Sciences student at LSU, data analyst, and technology enthusiast.">
+  <title>Sarah Jeffrey | Portfolio & Personal Website</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Two-Way Navigation Across All Pages) -->
+  <header class="navbar" id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="nav-brand" id="brand-logo" aria-label="Sarah Jeffrey Home">
+        <span class="nav-brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        <span>Sarah Jeffrey</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="resume.html" class="nav-link" id="nav-resume">Resume</a></li>
+          <li><a href="project.html" class="nav-link" id="nav-projects">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+      <div class="container">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>Open to Analytics & Software Opportunities</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Sarah Jeffrey</span>.<br>
+          Bridging business insights with software engineering.
+        </h1>
+        <p class="hero-description">
+          I am an Information Systems & Decision Sciences (ISDS) student at Louisiana State University. 
+          I specialize in business analytics, data pipeline automation with Python, and designing intuitive, 
+          responsive web applications that solve practical business problems.
+        </p>
+        <div class="hero-actions">
+          <a href="project.html" class="btn btn-primary" id="hero-projects-btn">
+            Explore Portfolio &rarr;
+          </a>
+          <a href="resume.html" class="btn btn-outline" id="hero-resume-btn">
+            View Academic & Work Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Overview Section -->
+    <section class="section" id="about-highlights">
+      <div class="container">
+        <h2 class="section-title">Core Competencies</h2>
+        <p class="section-subtitle">A balanced foundation spanning analytical modeling, product development, and collaborative leadership.</p>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="card" id="card-data-analytics">
+            <span class="card-category-badge">Analytics & Modeling</span>
+            <h3 class="card-title">Data Analytics & Visualization</h3>
+            <p class="card-description">
+              Transforming complex multi-dimensional datasets into clear, actionable business recommendations using Python, pandas, and exploratory data analysis.
+            </p>
+            <div class="card-details-block">
+              <strong>Key Strengths:</strong> Data cleaning, statistical distributions, predictive indicators, and dashboard reporting.
+            </div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Jupyter</span>
+              <span class="tag">SQL</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" id="card-software-products">
+            <span class="card-category-badge">Web Engineering</span>
+            <h3 class="card-title">Software & Web Architecture</h3>
+            <p class="card-description">
+              Crafting responsive, accessible user interfaces following agile product design cycles, clean semantic HTML5, modern CSS3 systems, and Git version control.
+            </p>
+            <div class="card-details-block">
+              <strong>Key Strengths:</strong> Mobile-first responsiveness, semantic accessibility, agile sprints, and component architecture.
+            </div>
+            <div class="tag-list">
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Agile Scrum</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" id="card-leadership">
+            <span class="card-category-badge">Leadership</span>
+            <h3 class="card-title">Operations & Leadership</h3>
+            <p class="card-description">
+              Spearheading committee initiatives, automating organizational attendance systems, and coordinating philanthropic campaigns across university organizations.
+            </p>
+            <div class="card-details-block">
+              <strong>Key Strengths:</strong> Process automation, cross-functional collaboration, event coordination, and stakeholder communication.
+            </div>
+            <div class="tag-list">
+              <span class="tag">Process Automation</span>
+              <span class="tag">Team Leadership</span>
+              <span class="tag">Alpha Delta Pi</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Callout Banner Connecting Pages (Two-way Navigation) -->
+        <div class="cta-box" id="cta-explore">
+          <h3 class="cta-title">Explore Detailed Background & Work</h3>
+          <p class="cta-desc">
+            Learn more about my technical experience, university coursework, and project deliverables through my dedicated subpages.
+          </p>
+          <div class="hero-actions" style="justify-content: center;">
+            <a href="project.html" class="btn btn-primary" id="cta-projects-btn">View Detailed Project Studies &rarr;</a>
+            <a href="resume.html" class="btn btn-outline" id="cta-resume-btn">Read Full Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Two-way Navigation Back to All Pages) -->
+  <footer class="footer" id="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-brand-title">Sarah Jeffrey</span>
+        <span>Information Systems & Decision Sciences &bull; Baton Rouge, LA</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="resume.html" class="footer-link">Resume</a>
+        <a href="project.html" class="footer-link">Projects</a>
+        <a href="mailto:sarah.aj.jeffrey@gmail.com" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
