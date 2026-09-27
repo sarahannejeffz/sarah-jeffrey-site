@@ -6,13 +6,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap');
 
 :root {
-  /* Color Palette - Blue Theme */
+  /* Layout & Geometry (Theme Independent) */
+  --max-width: 1120px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Color Palette - Blue Dark Theme (Default) */
   --bg-deep: #030816;
   --bg-main: #061129;
   --bg-surface: #0c1c42;
   --bg-surface-elevated: #132a63;
   --bg-card: rgba(12, 28, 66, 0.85);
   --bg-card-hover: rgba(19, 42, 99, 0.95);
+  --bg-navbar: rgba(6, 17, 41, 0.88);
+  --bg-details-block: rgba(6, 17, 41, 0.6);
+  --bg-tag: rgba(19, 42, 99, 0.8);
+  --text-tag: #bae6fd;
+  --bg-banner: linear-gradient(135deg, rgba(12, 28, 66, 0.95), rgba(19, 42, 99, 0.95));
+  --pill-bg: rgba(56, 189, 248, 0.12);
+  --pill-border: rgba(56, 189, 248, 0.35);
+  --badge-bg: rgba(56, 189, 248, 0.14);
+  --badge-border: rgba(56, 189, 248, 0.3);
+  --resume-icon-bg: rgba(37, 99, 235, 0.25);
+  --resume-icon-border: rgba(56, 189, 248, 0.4);
+  --bg-body-radial: 
+    radial-gradient(ellipse 90% 60% at 50% -20%, rgba(37, 99, 235, 0.22), transparent),
+    radial-gradient(circle at 10% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(29, 78, 216, 0.15) 0%, transparent 50%);
   
   /* Borders */
   --border-subtle: rgba(147, 197, 253, 0.16);
@@ -23,6 +47,7 @@
   --text-primary: #f0f7ff;
   --text-secondary: #c8ddf7;
   --text-muted: #8cb2e8;
+  --text-org: #93c5fd;
   
   /* Blue Accents */
   --accent-cyan: #38bdf8;
@@ -37,18 +62,96 @@
   --accent-gradient-hover: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #1e40af 100%);
   --card-gradient-border: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(59, 130, 246, 0.2), rgba(29, 78, 216, 0.4));
   
-  /* Typography */
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Layout & Geometry */
-  --max-width: 1120px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  /* Nav link states */
+  --nav-link-hover-bg: rgba(56, 189, 248, 0.1);
+  --nav-link-active-bg: rgba(37, 99, 235, 0.28);
+  --nav-link-active-border: rgba(56, 189, 248, 0.4);
+  --nav-link-active-text: #e0f2fe;
+  --nav-link-active-shadow: 0 0 12px rgba(37, 99, 235, 0.2);
+
+  /* Shadows */
   --shadow-card: 0 4px 24px rgba(2, 6, 23, 0.5);
   --shadow-hover: 0 12px 36px rgba(37, 99, 235, 0.28);
-  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-banner: 0 8px 30px rgba(37, 99, 235, 0.2);
+  --shadow-cta: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-brand-icon: 0 0 14px rgba(56, 189, 248, 0.3);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  /* Color Palette - Crisp Light Blue Theme */
+  --bg-deep: #e8eef8;
+  --bg-main: #f5f8fc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #edf2f9;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: #ffffff;
+  --bg-navbar: rgba(245, 248, 252, 0.88);
+  --bg-details-block: rgba(238, 244, 255, 0.92);
+  --bg-tag: rgba(224, 238, 255, 0.95);
+  --text-tag: #0369a1;
+  --bg-banner: linear-gradient(135deg, #eef6ff 0%, #e0edfe 100%);
+  --pill-bg: rgba(2, 132, 199, 0.08);
+  --pill-border: rgba(2, 132, 199, 0.24);
+  --badge-bg: rgba(2, 132, 199, 0.1);
+  --badge-border: rgba(2, 132, 199, 0.24);
+  --resume-icon-bg: rgba(37, 99, 235, 0.1);
+  --resume-icon-border: rgba(2, 132, 199, 0.28);
+  --bg-body-radial: 
+    radial-gradient(ellipse 90% 60% at 50% -20%, rgba(186, 230, 253, 0.45), transparent),
+    radial-gradient(circle at 10% 25%, rgba(219, 234, 254, 0.5), transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(224, 242, 254, 0.4), transparent 50%);
+
+  /* Borders */
+  --border-subtle: rgba(37, 99, 235, 0.12);
+  --border-medium: rgba(37, 99, 235, 0.22);
+  --border-glow: rgba(2, 132, 199, 0.45);
+
+  /* Text (WCAG AAA High Contrast on light background) */
+  --text-primary: #0a192f;
+  --text-secondary: #2d3d54;
+  --text-muted: #536987;
+  --text-org: #1d4ed8;
+
+  /* Blue Accents */
+  --accent-cyan: #0284c7;
+  --accent-sky: #2563eb;
+  --accent-blue: #1d4ed8;
+  --accent-cobalt: #1e40af;
+  --accent-ice: #0369a1;
+  --accent-emerald: #059669;
+
+  /* Gradients */
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #1d4ed8 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #0369a1 0%, #1d4ed8 50%, #1e40af 100%);
+  --card-gradient-border: linear-gradient(135deg, rgba(2, 132, 199, 0.35), rgba(37, 99, 235, 0.2), rgba(29, 78, 216, 0.35));
+
+  /* Nav link states */
+  --nav-link-hover-bg: rgba(2, 132, 199, 0.09);
+  --nav-link-active-bg: rgba(37, 99, 235, 0.12);
+  --nav-link-active-border: rgba(37, 99, 235, 0.3);
+  --nav-link-active-text: #1d4ed8;
+  --nav-link-active-shadow: 0 0 12px rgba(37, 99, 235, 0.12);
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.07);
+  --shadow-hover: 0 12px 32px rgba(37, 99, 235, 0.16);
+  --shadow-banner: 0 8px 30px rgba(37, 99, 235, 0.12);
+  --shadow-cta: 0 10px 30px rgba(37, 99, 235, 0.1);
+  --shadow-brand-icon: 0 0 14px rgba(2, 132, 199, 0.22);
+}
+
+/* Smooth Theme Transitions when switching */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.35s ease, 
+              border-color 0.35s ease, 
+              color 0.25s ease, 
+              box-shadow 0.35s ease,
+              fill 0.25s ease,
+              stroke 0.25s ease !important;
 }
 
 /* Smooth Scrolling */
@@ -72,10 +175,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: 
-    radial-gradient(ellipse 90% 60% at 50% -20%, rgba(37, 99, 235, 0.22), transparent),
-    radial-gradient(circle at 10% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 90% 70%, rgba(29, 78, 216, 0.15) 0%, transparent 50%);
+  background-image: var(--bg-body-radial);
   background-attachment: fixed;
   overflow-x: hidden;
   width: 100%;
@@ -119,7 +219,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(6, 17, 41, 0.88);
+  background: var(--bg-navbar);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
@@ -132,6 +232,12 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .nav-brand {
@@ -158,7 +264,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.3);
+  box-shadow: var(--shadow-brand-icon);
 }
 
 .nav-brand-icon svg {
@@ -185,14 +291,93 @@ img {
 
 .nav-link:hover {
   color: var(--text-primary);
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--nav-link-hover-bg);
 }
 
 .nav-link.active {
-  color: var(--accent-ice);
-  background: rgba(37, 99, 235, 0.28);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.2);
+  color: var(--nav-link-active-text);
+  background: var(--nav-link-active-bg);
+  border: 1px solid var(--nav-link-active-border);
+  box-shadow: var(--nav-link-active-shadow);
+}
+
+/* ==========================================================================
+   Theme Switcher Toggle Button
+   ========================================================================== */
+.theme-toggle {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  color: var(--accent-cyan);
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-surface-elevated);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.theme-toggle-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* Default / Dark Theme: Sun icon visible to switch to light mode */
+:root .sun-icon,
+[data-theme="dark"] .sun-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+:root .moon-icon,
+[data-theme="dark"] .moon-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.4);
+  pointer-events: none;
+}
+
+/* Light Theme: Moon icon visible to switch to dark mode */
+[data-theme="light"] .sun-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.4);
+  pointer-events: none;
+}
+
+[data-theme="light"] .moon-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
 }
 
 /* ==========================================================================
@@ -268,7 +453,7 @@ img {
 }
 
 .page-flow-link:hover {
-  color: #bae6fd;
+  color: var(--accent-sky);
   text-decoration: underline;
 }
 
@@ -348,8 +533,8 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
   color: var(--accent-cyan);
   padding: 6px 16px;
   border-radius: 9999px;
@@ -408,7 +593,7 @@ img {
    Resume Download Highlight Banner
    ========================================================================== */
 .resume-download-banner {
-  background: linear-gradient(135deg, rgba(12, 28, 66, 0.95), rgba(19, 42, 99, 0.95));
+  background: var(--bg-banner);
   border: 1px solid var(--border-glow);
   border-radius: var(--radius-md);
   padding: 26px 30px;
@@ -418,7 +603,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
+  box-shadow: var(--shadow-banner);
 }
 
 .resume-download-info {
@@ -431,8 +616,8 @@ img {
   width: 52px;
   height: 52px;
   border-radius: var(--radius-sm);
-  background: rgba(37, 99, 235, 0.25);
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  background: var(--resume-icon-bg);
+  border: 1px solid var(--resume-icon-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,8 +746,8 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent-cyan);
-  background: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
   padding: 4px 10px;
   border-radius: 6px;
   margin-bottom: 14px;
@@ -585,7 +770,7 @@ img {
 }
 
 .card-details-block {
-  background: rgba(6, 17, 41, 0.6);
+  background: var(--bg-details-block);
   border-left: 3px solid var(--accent-blue);
   padding: 12px 16px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -608,9 +793,9 @@ img {
 }
 
 .tag {
-  background: rgba(19, 42, 99, 0.8);
+  background: var(--bg-tag);
   border: 1px solid var(--border-medium);
-  color: #bae6fd;
+  color: var(--text-tag);
   padding: 5px 12px;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -678,16 +863,16 @@ img {
   font-size: 0.875rem;
   color: var(--accent-cyan);
   font-weight: 600;
-  background: rgba(56, 189, 248, 0.12);
+  background: var(--pill-bg);
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid var(--pill-border);
 }
 
 .resume-org {
   font-size: 1rem;
   font-weight: 600;
-  color: #93c5fd;
+  color: var(--text-org);
   margin-bottom: 14px;
 }
 
@@ -797,13 +982,13 @@ img {
 }
 
 .cta-box {
-  background: linear-gradient(135deg, rgba(12, 28, 66, 0.95), rgba(19, 42, 99, 0.95));
+  background: var(--bg-banner);
   border: 1px solid var(--border-glow);
   border-radius: var(--radius-lg);
   padding: 44px;
   text-align: center;
   margin: 50px 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-cta);
 }
 
 .cta-title {
@@ -893,9 +1078,31 @@ img {
   }
 
   .navbar .nav-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px 8px;
+  }
+
+  .nav-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .nav-controls {
+    display: contents;
+  }
+
+  .nav-controls nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
   }
 
   .nav-links {
